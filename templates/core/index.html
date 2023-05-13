@@ -1,9 +1,10 @@
 {% extends 'core/base.html' %}
 {% block titulo %}Inicio{% endblock %}
 {% block contenido %}
+{% load static %}
     <!-- Impact zone -->
     <div class="card text-bg-dark">
-        <img src="assets/img/spends.png" class="card-img img-fluid h-50" width="30%" alt="Foto de Karolina Grabowska: https://www.pexels.com/es-es/foto/seguir-capital-goma-rico-4386477/"> 
+        <img src="{% static 'assets/img/statics/spends.png' %}" class="card-img img-fluid h-50" width="30%" alt="Foto de Karolina Grabowska: https://www.pexels.com/es-es/foto/seguir-capital-goma-rico-4386477/"> 
     </div>
 
     <!-- Promo Section -->
@@ -12,21 +13,21 @@
             <article class="col-12 mt-5 mb-5 row text-center">
                 <div class="col">
                     <i class="bi bi-cash-coin display-1 text-success"></i>
-                    <h1 class="display-2">Prepara</h1>
+                    <h1 class="display-2"> {{ promo.0 }} </h1>
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, soluta veritatis. Necessitatibus commodi ad adipisci inventore distinctio fuga, animi doloribus labore nulla molestiae repellat? Natus consequuntur earum sint doloremque voluptatibus!
                     </p>
                 </div>
                 <div class="col">
                     <i class="bi bi-bank display-1 text-danger"></i>
-                    <h1 class="display-2">Dispone</h1>
+                    <h1 class="display-2"> {{ promo.1 }} </h1>
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, soluta veritatis. Necessitatibus commodi ad adipisci inventore distinctio fuga, animi doloribus labore nulla molestiae repellat? Natus consequuntur earum sint doloremque voluptatibus!
                     </p>
                 </div>
                 <div class="col">
                     <i class="bi bi-currency-exchange display-1 text-warning"></i>
-                    <h1 class="display-2">Gestiona</h1>
+                    <h1 class="display-2"> {{ promo.2 }} </h1>
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, soluta veritatis. Necessitatibus commodi ad adipisci inventore distinctio fuga, animi doloribus labore nulla molestiae repellat? Natus consequuntur earum sint doloremque voluptatibus!
                     </p>
@@ -49,7 +50,7 @@
                             <path class="exhaust__line" fill="#E6E9EE" d="M250 172h7v90h-7z"></path>
                             <path class="flame" d="M250.27 178.834l-5.32-8.93s-2.47-5.7 3.458-6.118h10.26s6.232.266 3.306 6.194l-5.244 8.93s-3.23 4.37-6.46 0v-.076z" fill="#AA2247"></path>
                         </svg>
-                        <h3 class="text-success">DJANGO</h3>
+                        <h3 class="text-success">{{ framework }}</h3>
                     </div>
                     <div class="col">
                         <h3 class="text-info">Redes Sociales:</h3>
@@ -59,8 +60,8 @@
 
                     </div>
                     <div class="col-6">
-                        <h3 class="text-primary">Encuentranos en:</h3>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7932.367519897835!2d-75.54566153618562!3d6.239495190205395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44286523bd6633%3A0xf7dc0b7a3610b20e!2sSan%20Antonio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1682213831897!5m2!1ses!2sco" width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <h3 class="text-primary"> {{ titulo_mapa }} </h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7932.367519897835!2d-75.54566153618562!3d6.239495190205395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44286523bd6633%3A0xf7dc0b7a3610b20e!2sSan%20Antonio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1682213831897!5m2!1ses!2sco" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </footer>
